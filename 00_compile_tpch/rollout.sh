@@ -21,6 +21,7 @@ make_tpc()
 }
 copy_queries()
 {
+	cd $PWD
 	rm -rf $PWD/../*_gen_data/queries
 	rm -rf $PWD/../*_multi_user/queries
 	cp -R dbgen/queries $PWD/../*_gen_data/
@@ -40,7 +41,7 @@ copy_tpc()
 	done
 }
 
-make_tpc
+#make_tpc
 create_hosts_file
 copy_queries
 copy_tpc
